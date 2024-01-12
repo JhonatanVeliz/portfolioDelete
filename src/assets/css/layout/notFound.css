@@ -1,0 +1,50 @@
+@import url('../abstacts/variables.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.notFound {
+    @apply bg-black w-full flex items-center justify-center;
+    min-height: 100vh;
+}
+
+.notFound__container {
+    @apply text-gray-200 flex items-center text-center flex-wrap;
+    gap: 10rem;
+}
+
+.notFound__info {
+    @apply flex flex-col gap-14;
+}
+
+.notFound__info p {
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.notFound__info__return {
+    @apply flex justify-center items-center flex-row-reverse gap-5;
+    align-self: flex-end;
+    width: 20rem;
+    height: 5rem;
+    border: 1px solid #595959;
+}
+
+.notFound__info__return__img {
+    width: 0;
+    height: 0;
+    transition: .3s ease-in-out;
+    opacity: 0;
+}
+
+.notFound__info__return:hover .notFound__info__return__img {
+    width: 3rem;
+    height: 3rem;
+    opacity: 1;
+}
+
+@media screen and (max-width:1200px) {
+    .notFound__container {
+        flex-direction: column;
+    }
+}

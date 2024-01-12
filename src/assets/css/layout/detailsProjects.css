@@ -1,0 +1,87 @@
+@import url('../abstacts/variables.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.projects {
+    @apply w-full flex gap-8 flex-wrap items-center;
+    padding-top: 4rem;
+}
+
+.projects__card {
+    @apply flex flex-col items-center overflow-hidden border border-transparent;
+    width: 28rem;
+    border-radius: 1rem;
+    text-align: center;
+    border-width: 1.5px;
+    box-shadow: 0 0 1rem #8a8a8a;
+    transition: .3s ease-in-out;
+}
+
+.projects__card--dark {
+    border: 1.5px solid #2194f265;
+    box-shadow: 0 0 1rem transparent;
+    background-color: #050c1a;
+}
+
+.projects__card:hover {
+    opacity: .9;
+}
+
+.projects__card__img {
+    width: 100%;
+}
+
+.projects__card__info {
+    @apply flex flex-col;
+    padding: 0 .5rem .5rem .5rem;
+}
+
+.projects__card__credits {
+    @apply flex justify-between items-center;
+    font-size: 1.3rem;
+    text-align: left;
+    padding: 0;
+    font-weight: 800;
+    color: #b013c2;
+}
+
+.projects__card__credits--dark {
+    color: #14a1cf;
+}
+
+.projects__card__credits__img {
+    @apply flex gap-2 items-center;
+}
+
+.projects__card__credits__img img {
+    border-radius: 50%;
+}
+
+.projects__card__title {
+    @apply text-gray-900 dark:text-gray-200;
+    font-weight: 800;
+    font-size: 1.8rem;
+    padding-top: .3rem;
+}
+
+.projects__card__paragraph {
+    @apply text-gray-900 dark:text-gray-200;
+    line-height: 1.3;
+    padding: 1.5rem 0;
+}
+
+.projects__card__tecnologies {
+    @apply flex gap-3;
+    align-self: flex-start;
+}
+
+.projects__card__tecnologies__img {
+    max-width: 4rem;
+    transition: transform .4s ease-in-out;
+}
+
+.projects__card__tecnologies__img:hover {
+    transform: rotate(30deg);
+}

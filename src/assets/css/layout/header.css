@@ -1,0 +1,76 @@
+@import url('../abstacts/variables.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --header-bg: #0057FF;
+    --fz-h-principal: 4rem;
+}
+
+/* Header */
+.header{
+    background-color: var(--header-bg);
+    padding: 3rem 0;
+}
+
+.header__content {
+    padding: 2rem 0 7rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.header__content span {
+    font-weight: 700;
+    font-size: var(--fz-h-principal);
+}
+
+.header__content__skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header__content .icon-tech {
+    width: 8rem;
+    height: 10rem;
+    cursor: pointer;
+    animation: animation-skill 2s alternate infinite;
+}
+
+.header__content .icon-tech:hover {
+    animation: none;
+}
+
+.btnMode {
+    @apply bg-gray-100 p-3 rounded-full;
+    box-shadow: -1px -1px 5px rgba(255, 255, 255, 0.428), 2px 2px 5px rgba(0, 0, 0, 0.5), 1px 1px 10px rgba(0, 0, 0, 0.318);
+}
+
+.btnMode__select{
+    @apply flex h-12 w-32 rounded-full justify-center;
+}
+
+.btnMode__select__img {
+    @apply flex justify-center items-center p-2 bg-gray-700 rounded-full;
+    transform: translateX(-2.4rem) translateY(-.2rem);
+    width: 3.5rem;
+    height: 3.5rem;
+    transition: .3s ease-out;
+}
+
+.btnMode__select__img--active {
+    transform: translateX(2.4rem) translateY(-.2rem);
+}
+
+@keyframes animation-skill {
+    from {
+        transform: translateY(10px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}

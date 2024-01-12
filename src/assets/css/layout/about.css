@@ -1,0 +1,72 @@
+@import url('../abstacts/variables.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.about__perfil {
+    display: flex;
+    justify-content: center;
+    margin-top: -8rem
+}
+
+.about__perfil__marco {
+    @apply flex justify-center items-center rounded-full relative;
+    height: 16rem;
+    width: 16rem;
+    z-index: 30;
+    background: linear-gradient(to bottom, #2d2d2d 50%, #0057FF 50%);
+    box-shadow: 0 0 1rem #000000cd;
+}
+
+.about__perfil__marco--isDark {
+    background: linear-gradient(to bottom, #2194f2 50%, #2194f2 50%);
+}
+
+.about__perfil__marco__content {
+    @apply bg-black flex justify-center items-center rounded-full relative;
+    align-items: center;
+    height: 15rem;
+    z-index: 30;
+}
+
+.about__perfil img {
+    margin-top: -2rem;
+    width: 15rem;
+    object-fit: cover;
+}
+
+.about__info {
+    @apply flex flex-col items-center gap-2 pt-6;
+    width: 100%;
+}
+
+.about__info__title, .about__info__paragraph {
+    @apply text-gray-900 dark:text-gray-200;
+}
+
+.about__info__title {
+    @apply capitalize pb-11;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 800;
+}
+
+.about__info__paragraph {
+    text-align: center;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.about__contact {
+    @apply flex justify-between items-center;
+}
+
+.about__contact__socials {
+    @apply flex gap-5;
+}
+
+.about__contact__me {
+    @apply capitalize p-5 rounded-2xl text-white;
+    background-color: var(--color-blue);
+}

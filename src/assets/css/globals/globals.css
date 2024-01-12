@@ -1,0 +1,19 @@
+@import url('../abstacts/variables.css');
+
+body {
+    transition: .3s ease-in-out;
+}
+
+.body-light {
+    background-color: var(--bg-body);
+}
+
+.grid-layout {
+    width: 95%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.section-layout {
+    padding-bottom: 5rem;
+}
