@@ -25,7 +25,7 @@ const RootLayout :FC<Props> = ({children}) => {
 
   return (
     <html lang="es">
-      <body className={`${poppins.className} ${ isDarkMode ? 'dark bg-black' : 'body-light' }`}>
+      <body className={`${poppins.className} ${ isDarkMode ? 'dark body-dark' : 'body-light' }`}>
         {children}
       </body>
     </html>

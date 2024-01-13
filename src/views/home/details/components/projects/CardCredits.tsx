@@ -13,7 +13,7 @@ const CardCredits: FC<Props> = ({ colaborators }) => {
   const { isDarkMode } = stateDarkMode();
 
   return (
-    <p className={`projects__card__credits ${isDarkMode ? 'projects__card__credits--dark' : ''}`}>
+    <div className={`projects__card__credits ${isDarkMode ? 'projects__card__credits--dark' : ''}`}>
 
       <span>
         Creado por:
@@ -34,7 +34,7 @@ const CardCredits: FC<Props> = ({ colaborators }) => {
 
       </span>
 
-    </p>
+    </div>
   )
 }
 

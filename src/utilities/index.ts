@@ -1,7 +1,6 @@
-export const generatorId = () => {
-    const date : Date = new Date();
-    const time : number = date.getTime();
-    const random : number = Math.round( Math.random() * 10 );
+import { v4 as uuid } from 'uuid';
 
-    return `${time + 2 * random}`;
+export const generatorId = () => {
+    const id = uuid();
+    return id;
 };

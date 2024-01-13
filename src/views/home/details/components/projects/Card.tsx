@@ -21,7 +21,7 @@ const Card: FC<Props> = ({ img, title, alt, colaborators, text, path, tecnologie
   const { isDarkMode } = stateDarkMode();
 
   return (
-    <Link href={path} target="_blank" className={`projects__card ${isDarkMode ? 'projects__card--dark' : ''}`}>
+    <article className={`projects__card ${isDarkMode ? 'projects__card--dark' : ''}`}>
 
       <Image 
         src={img}
@@ -31,18 +31,21 @@ const Card: FC<Props> = ({ img, title, alt, colaborators, text, path, tecnologie
         className="projects__card__img"
       />
 
-      <div className="projects__card__info">
+      <section className="projects__card__info">
 
         <CardCredits colaborators={colaborators} />
 
-        <h2 className="projects__card__title">{title}</h2>
+        <h3 className="projects__card__title">{title}</h3>
         <p className="projects__card__paragraph">{text}</p>
 
         <CardTecnologies tecnologies={tecnologies} />
 
-      </div>
+      </section>
 
-    </Link>
+      <Link href={path} target="_blank" className="projects__card__link">
+      </Link>
+
+    </article>
   )
 }
 

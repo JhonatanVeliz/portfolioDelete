@@ -1,53 +1,40 @@
 'use client';
 // REACT
-import { useState } from "react";
+import { FC, useState } from "react";
+// COMPONENTS
+import Projects from "./projects/Cards";
 
 // CSS
 import '@/assets/css/layout/detailsNav.css';
 
-interface PathsType {
-  projects : string;
-  certifys : string;
-  skills  : string;
+interface Props {
+  view : string;
+  changeView : ( event:any ) => void
 }
 
-const Nav = () => {
-
-  const [ view, setView ] = useState('projects');
-
-  const paths:PathsType  = {
-    projects : 'projects',
-    certifys : 'certifys',
-    skills : 'skills',
-  }
-
-  const changeView = (e: any) => {
-    const dataView :string = e.target.getAttribute('data-view');
-
-    if(paths[dataView]) setView(paths[dataView]);
-  }
+const Nav: FC<Props> = ({ view , changeView }) => {
 
   return (
     <nav className="nav">
 
-      <button 
-        className={`nav__link ${ view === 'projects' ? 'nav__link--active' : ''}`}
+      <button
+        className={`nav__link ${view === 'projects' ? 'nav__link--active' : ''}`}
         data-view="projects"
         onClick={changeView}
       >
         Proyectos
       </button>
 
-      <button 
-        className={`nav__link ${ view === 'certifys' ? 'nav__link--active' : ''}`}
-        data-view="certifys"
+      <button
+        className={`nav__link ${view === 'certifys' ? 'nav__link--active' : ''}`}
+        data-view="certificates"
         onClick={changeView}
       >
         Certificaciones
       </button>
 
-      <button 
-        className={`nav__link ${ view === 'skills' ? 'nav__link--active' : ''}`}
+      <button
+        className={`nav__link ${view === 'skills' ? 'nav__link--active' : ''}`}
         data-view="skills"
         onClick={changeView}
       >

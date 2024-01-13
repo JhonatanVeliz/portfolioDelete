@@ -50,7 +50,7 @@ const Cards = () => {
   ];
 
   return (
-    <div className="projects">
+    <section className="projects">
       {
         projects.map( (card, index) => (
           <Card 
@@ -65,7 +65,7 @@ const Cards = () => {
           />
         ))
       }
-    </div>
+    </section>
   )
 }
 

@@ -17,7 +17,7 @@ const NotFound = () => {
       <div className='notFound__container grid-layout'>
 
         <Image
-          src="./images/not-found.svg"
+          src="/images/not-found.svg"
           alt="imagen de pagina no encontrada"
           width="400"
           height="400"

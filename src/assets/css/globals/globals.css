@@ -8,6 +8,10 @@ body {
     background-color: var(--bg-body);
 }
 
+.body-dark {
+    background-color: var(--bg-body-dark);
+}
+
 .grid-layout {
     width: 95%;
     max-width: 1300px;

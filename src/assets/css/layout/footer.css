@@ -8,7 +8,7 @@
 }
 
 .footer {
-    @apply bg-black;
+    background-color: var(--bg-body-dark);
 }
 
 .footer-container {
@@ -43,7 +43,8 @@
 
 .footer__line__content strong::after {
     content: '<END/>';
-    @apply absolute z-10 text-center bg-black;
+    @apply absolute z-10 text-center;
+    background-color: var(--bg-body-dark);
     font-weight: 600;
     width: 15rem;
 }
