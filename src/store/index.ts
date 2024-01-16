@@ -7,5 +7,10 @@ interface DarkMode {
 
 export const stateDarkMode = create<DarkMode>( (set) => ({
     isDarkMode : false,
-    changeDarkMode : () => set( (state) => ({isDarkMode : !state.isDarkMode}))
+    changeDarkMode : () => {
+        return set( state => {
+        localStorage.setItem('mode', JSON.stringify({isDarkMode : !state.isDarkMode}));
+        return {isDarkMode : !state.isDarkMode};
+        })
+    },
 }));

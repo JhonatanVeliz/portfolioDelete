@@ -1,5 +1,5 @@
 'use client';
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 // NEXT
 import type { Metadata } from 'next';
@@ -16,16 +16,16 @@ const metadata: Metadata = {
 
 // TS
 interface Props {
-  children : React.ReactNode
+  children: React.ReactNode
 }
 
-const RootLayout :FC<Props> = ({children}) => {
+const RootLayout: FC<Props> = ({ children }) => {
 
   const { isDarkMode } = stateDarkMode();
 
   return (
     <html lang="es">
-      <body className={`${poppins.className} ${ isDarkMode ? 'dark body-dark' : 'body-light' }`}>
+      <body className={`${poppins.className} ${isDarkMode ? 'dark body-dark' : 'body-light'}`}>
         {children}
       </body>
     </html>

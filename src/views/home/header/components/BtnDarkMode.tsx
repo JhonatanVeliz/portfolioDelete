@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Image from 'next/image';
 import { stateDarkMode } from '@/store';
@@ -6,6 +6,14 @@ import { stateDarkMode } from '@/store';
 const BtnDarkMode = () => {
 
   const { isDarkMode, changeDarkMode } = stateDarkMode();
+
+  useEffect( () => {
+    const mode = JSON.stringify(localStorage.getItem('mode'));
+    if(mode?.isDarkMode) {
+      changeDarkMode();
+    }
+    
+  }, [])
 
   return (
     <button className='btnMode' onClick={changeDarkMode}>
