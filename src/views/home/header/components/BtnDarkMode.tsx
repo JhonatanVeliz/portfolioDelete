@@ -1,18 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 import Image from 'next/image';
 import { stateDarkMode } from '@/store';
 
 const BtnDarkMode = () => {
 
-  const { isDarkMode, changeDarkMode } = stateDarkMode();
+  const { isDarkMode, changeDarkMode, validateMode } = stateDarkMode();
 
   useEffect( () => {
-    const mode = JSON.stringify(localStorage.getItem('mode'));
-    if(mode?.isDarkMode) {
-      changeDarkMode();
-    }
-    
+    validateMode();
   }, [])
 
   return (
